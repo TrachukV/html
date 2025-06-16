@@ -1,0 +1,149 @@
+@font-face {
+	font-family: 'PermanentMarker';
+	src: url(assets/fonts/PermanentMarker-Regular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: url(assets/images/background.avif) center/cover fixed no-repeat;
+	background-color: #f0f0f0;
+	font-family: 'PermanentMarker', sans-serif;
+	margin: 0;
+	padding: 20px;
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	font-size: 40px;
+	color: rgb(145, 255, 0);
+}
+
+p {
+	font-size: 18px;
+	color: white;
+	-webkit-text-stroke: 0.2px rgb(145, 255, 0);
+}
+
+.header-container {
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid rgb(145, 255, 0);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	padding: 5px 20px;
+	display: inline-block;
+	margin: 0;
+}
+
+.box-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 40px;
+}
+
+.box,
+.box-text {
+	width: 350px;
+	padding: 15px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgb(145, 255, 0);
+}
+
+.box {
+	background-color: rgba(253, 253, 253, 0.7);
+}
+
+.box-text {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.box img {
+	width: 100%;
+	height: 300px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.image-wrapper {
+	position: relative;
+}
+
+.hover-text {
+	position: absolute;
+	inset: 0;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .hover-text {
+	opacity: 1;
+}
+
+.name,
+.name-green {
+	font-size: 22px;
+	margin-bottom: 10px;
+	-webkit-text-stroke: 0.2px rgb(145, 255, 0);
+}
+
+.name {
+	color: black;
+}
+
+.name-green {
+	color: rgb(145, 255, 0);
+}
+
+.secret-list {
+	list-style-position: outside;
+	padding: 0;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.secret-list li {
+	width: 300px;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 10px 15px;
+	border-radius: 10px;
+	color: rgb(145, 255, 0);
+}
+
+.secret-list .hidden-text {
+	visibility: hidden;
+	color: white;
+	-webkit-text-stroke: 0.2px rgb(145, 255, 0);
+}
+
+.secret-list li:hover .hidden-text {
+	visibility: visible;
+}
+
+.signature {
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	color: rgb(145, 255, 0);
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px solid rgb(145, 255, 0);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+}
